@@ -17,6 +17,8 @@
         <a href="/">🏠 Home</a>
         <a href="/about/">ℹ️ About</a>
         <a href="{% url 'posts:list' %}">📝 Posts</a>
+        <a href="{% url 'users:register' %}">👤 Register</a>
+        <a href="{% url 'users:login' %}">🔐 Login</a>
     </nav>
     <main>
         {% block content %}
