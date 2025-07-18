@@ -19,6 +19,10 @@
         <a href="{% url 'posts:list' %}">📝 Posts</a>
         <a href="{% url 'users:register' %}">👤 Register</a>
         <a href="{% url 'users:login' %}">🔐 Login</a>
+        <form action="{% url 'users:logout' %}" method="post">
+                {% csrf_token %} 
+            <button aria-label="User Logout" title="User Logout">👋</button>
+        </form>
     </nav>
     <main>
         {% block content %}
