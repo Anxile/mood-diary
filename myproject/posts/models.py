@@ -6,6 +6,8 @@ class Post(models.Model):
     content = models.TextField()
     slug = models.SlugField(max_length=75)
     created_at = models.DateTimeField(auto_now_add=True)
+    banner = models.ImageField(default='default.jpg', blank=True)
+
 
     def __str__(self):
         return self.title
